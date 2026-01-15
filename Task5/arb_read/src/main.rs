@@ -34,14 +34,7 @@ async fn main() -> Result<()> {
     }
 
     // 4) 加载合约
-    let contract = Weth::new(addr, provider.into());
-
-    // 5) 只读调用
-    let name = contract.name().call().await?;
-    let symbol = contract.symbol().call().await?;
-    let decimals = contract.decimals().call().await?;
-
-    println!("✅ 合约存在，读取成功！");
+    let contract = Weth::new(addr, provider.i
     println!("address  : {:?}", addr);
     println!("name     : {}", name);
     println!("symbol   : {}", symbol);
@@ -49,3 +42,11 @@ async fn main() -> Result<()> {
 
     Ok(())
 }
+nto());
+
+    // 5) 只读调用
+    let name = contract.name().call().await?;
+    let symbol = contract.symbol().call().await?;
+    let decimals = contract.decimals().call().await?;
+
+    println!("✅ 合约存在，读取成功！");

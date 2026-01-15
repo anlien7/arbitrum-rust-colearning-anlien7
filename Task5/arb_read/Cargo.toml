@@ -1,0 +1,10 @@
+[package]
+name = "arb_read"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ethers = { version = "2", features = ["abigen", "rustls"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+anyhow = "1"
+dotenvy = "0.15"
